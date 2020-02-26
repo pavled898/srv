@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~src/scss/vars";
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*:link,
+*:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 62.25%;
+    font-family: "Akkurat Pro", sans-serif;
+}
