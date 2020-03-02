@@ -1,6 +1,28 @@
+@import "~src/scss/vars";
+@import "~src/scss/typo";
+
 :host {
-    display: flex;
+    display: grid;
+    grid-template-rows: [navbar-start] minmax(min-content, 3vw) [navbar-end content-start] min-content;
+    grid-template-columns: [full-start] 1fr [full-end];
     min-width: 100vw;
-    min-height: 100vh;
-    background-color: var(--color-grey);
+    min-height: 110vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+    grid-template-rows: [header-start] 87vh [header-end];
+}
+
+.header {
+    grid-column: full-start / col-end 6;
+    background-image: linear-gradient( to right, rgba($color-1, .93),  rgba($color-1, .93) ), url(../assets/img/head1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.most-wanted {
+    grid-column: col-start 7 / full-end;
+    background-color: $color-1;
 }

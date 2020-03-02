@@ -1,10 +1,17 @@
+@import "~src/scss/vars";
+@import "~src/scss/typo";
+
 :host {
-    position: fixed;
-    height: 6vh;
-    min-height: 2vw;
-    width: 100vw;
-    background-color: var(--color-1);
-    opacity: .85;
+    grid-column: full-start / full-end;
+    grid-row: navbar-start / navbar-end;
+    position: sticky;
+    top: 0;
+    right: 0;
+    // height: 6vh;
+    // min-height: 2vw;
+    // width: 100vw;
+    background-color: $color-3;
+    opacity: .93;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
@@ -17,8 +24,8 @@
 }
 
 .primary-heading {
-    color: var(--color-4);
+    color: $color-4;
     text-transform: uppercase;
-    font-size: 2vw;
+    font-size: 3rem;
 }
 

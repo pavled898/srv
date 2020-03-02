@@ -1,8 +1,9 @@
-body {
-    --color-1: rgb(49, 52, 70);
-    --color-2:  rgb(209, 233, 229);
-    --color-3:  rgb(113, 88, 70);
-    --color-4:  rgb(233, 237, 222);
-    --color-5:  rgb(206, 213, 176);
+$color-1:  #313446;
+$color-2:  #d1e9e5;
+$color-3:  #715846;
+$color-4:  #e9edde;
+$color-5:  #ced5b0;
 
-}
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;

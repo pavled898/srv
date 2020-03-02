@@ -1,0 +1,39 @@
+@import "~src/scss/vars";
+
+%heading {
+    font-family: $font-display;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    color: $color-4;
+    line-height: 1;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+    &--light { color: $color-4; }
+    &--dark { color: $color-4; }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    color: $color-3;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light { color: $color-4; }
+    &--dark { color: $color-4; }
+}
