@@ -10,7 +10,7 @@
     // height: 6vh;
     // min-height: 2vw;
     // width: 100vw;
-    background-color: $color-3;
+    background-color: $color-secondary-light;
     opacity: .93;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -24,7 +24,7 @@
 }
 
 .primary-heading {
-    color: $color-4;
+    color: $color-grey-dark;
     text-transform: uppercase;
     font-size: 3rem;
 }
