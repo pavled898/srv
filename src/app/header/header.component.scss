@@ -13,6 +13,7 @@
     background-color: $color-secondary-light;
     opacity: .93;
     display: grid;
+    z-index: 10;
     grid-template-columns: repeat(10, 1fr);
 }
 

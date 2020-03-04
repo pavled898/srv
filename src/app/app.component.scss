@@ -7,28 +7,9 @@
     grid-template-columns: [full-start] 1fr [full-end];
     min-width: 100vw;
     min-height: 110vh;
+    background-color: $color-secondary-light;
+    padding: 0 10rem;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
-    grid-template-rows: [header-start] 87vh [header-end];
-}
 
-.header {
-    grid-column: full-start / full-end;
-    background-image: linear-gradient( to right, rgba($color-primary-dark, .93),  rgba($color-primary-dark, .93) ), url(../assets/img/head1.jpeg);
-    background-size: cover;
-    background-position: center;
-}
 
-.most-wanted {
-    grid-column: col-start 7 / full-end;
-    background-color: rgba($color-secondary-light, .98);
-    padding: 2rem 1.5rem;
-    display: grid;
-    grid-template-rows: repeat(4);
-    align-content: center;
-    justify-content: center;
-    // box-shadow: -1rem -1rem 24px black;
-}
