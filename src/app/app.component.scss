@@ -3,12 +3,13 @@
 
 :host {
     display: grid;
-    grid-template-rows: [navbar-start] minmax(min-content, 3vw) [navbar-end content-start] min-content;
+    grid-template-rows: [navbar-start] minmax(min-content, 3vw) [navbar-end content-start] max-content;
     grid-template-columns: [full-start] 1fr [full-end];
     min-width: 100vw;
     min-height: 110vh;
     background-color: $color-secondary-light;
     padding: 0 10rem;
+    overflow: hidden;
 }
 
 

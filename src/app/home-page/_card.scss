@@ -4,17 +4,30 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    min-height: 60rem;
-    max-height: 100%;
-    margin: 3rem;
+    height: 60vh;
+
+
+    &--1 {
+       grid-column: 2/3; 
+    }
+    &--2 {
+        grid-column: 3/4; 
+        
+    }
+    &--3 {
+        grid-column: 4/5; 
+
+    }
     
     &__side {
+        display: flex;
+        flex-direction: column;
         height: 100%;
+        width: 100%;
         transition: all .8s ease;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
@@ -55,7 +68,7 @@
     // FRONT SIDE STYLING
     &__picture {
         background-size: cover;
-        height: 23rem;
+        flex: .4;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -85,9 +98,9 @@
         text-align: right;
         color: $color-white;
         position: absolute;
-        top: 12rem;
+        bottom: 67%;
         right: 2rem;
-        width: 75%;
+        min-width: 75%;
     
     }
 
@@ -118,6 +131,7 @@
 
     &__details {
         padding: 3rem;
+        flex: .6;
 
         ul {
             list-style: none;
@@ -171,10 +185,11 @@
     @media only screen and (max-width: 56.25em),
             only screen and (hover: none) {
 
-        height: auto;
+        // height: auto;
         border-radius: 3px;
         background-color: $color-white;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        grid-column: 2/3;
         
         &__side {
             height: auto;

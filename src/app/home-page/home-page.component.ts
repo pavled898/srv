@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  constructor() { 
+    console.log(this.isMobile)
+  }
 
   ngOnInit() {
   }

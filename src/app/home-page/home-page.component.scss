@@ -6,7 +6,7 @@
     
     display: grid;
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
-    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(min-content, 100vh) [mw-end];
+    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(100vh, min-content) [mw-end];
 }
 
 .header {
@@ -18,18 +18,19 @@
 }
 
 .most-wanted {
-    height: 100%;
+
     margin-top: -15vh;
     grid-column: full-start / full-end;
     // background-color: rgba($color-secondary-light, .98);
-    padding: 20vh 30rem 5rem 30rem ;
+    padding: 20vh 0 5rem 0 ;
     display: grid;
-    grid-template-columns: 1fr repeat(3, 40rem) 1fr;
-    grid-template-rows: 20% 80%;
-    // gap: 2rem;
+    grid-template-columns: 1fr repeat(3, minmax(0em, 40rem)) 1fr;
+    grid-template-rows: 20vh 80vh;
+    gap: 2rem;
     align-content: start;
     justify-content: start;
     background-color: $color-white;
+    overflow: hidden;
 
     // box-shadow: -1rem -1rem 24px black;
     &__title {
@@ -58,6 +59,12 @@
         //     transform: skewY(2deg) skewX(15deg) scale(1.1);
         //     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
         // }
+    }
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 10vh repeat(3, 80vh) ;
+
     }
 }
 
