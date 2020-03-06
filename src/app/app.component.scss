@@ -1,5 +1,6 @@
 @import "~src/scss/vars";
 @import "~src/scss/typo";
+@import "../scss/buttons";
 
 :host {
     display: grid;
@@ -9,7 +10,12 @@
     min-height: 110vh;
     background-color: $color-secondary-light;
     padding: 0 10rem;
-    overflow: hidden;
+    // overflow: hidden;
+
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
+        padding: 0 0 5vh 0;
+    }
 }
 
 

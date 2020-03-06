@@ -1,12 +1,13 @@
 @import "~src/scss/vars";
 @import "~src/scss/typo";
+@import "~src/scss/buttons";
 @import "./card";
 
 :host {
     
     display: grid;
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
-    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(100vh, min-content) [mw-end];
+    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(100vh, min-content) [mw-end map-start] minmax(80vh, min-content) [map-end];
 }
 
 .header {
@@ -40,6 +41,7 @@
         justify-content: center;
         font-size: 3.5rem;
         text-transform: uppercase;
+        text-align: center;
         font-weight: 700;
         background-image: linear-gradient(to right, $color-primary-dark, lighten($color-primary-light, 50%) );
         -webkit-background-clip: text;
@@ -62,10 +64,17 @@
     }
     @media only screen and (max-width: 56.25em),
             only screen and (hover: none) {
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 10vh repeat(3, 80vh) ;
+                grid-template-columns: .2fr 1fr .2fr;
+                grid-template-rows: 10vh repeat(3, max-content) ;
 
     }
+}
+.map {
+
+    overflow:hidden;
+    height:100%;
+    width:100%; 
+    grid-column: 1 / -1;
 }
 
 

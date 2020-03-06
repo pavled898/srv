@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~src/scss/vars";
+@import "~src/scss/mixins";
 
 *, 
 *::after,
@@ -20,4 +21,21 @@ html {
     box-sizing: border-box;
     font-size: 62.25%;
     font-family: "Akkurat Pro", sans-serif;
+
+    
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+    
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(phone) { // width < 1200?
+        font-size: 40.625%; //1 rem = 9px, 6.5/16 = 40.625%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
 }
