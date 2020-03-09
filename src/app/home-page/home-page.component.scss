@@ -7,7 +7,7 @@
     
     display: grid;
     grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
-    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(100vh, min-content) [mw-end map-start] minmax(80vh, min-content) [map-end] minmax(80vh, min-content)
+    grid-template-rows: [header-start] 85vh [header-end mw-start] minmax(100vh, min-content) [mw-end map-start] minmax(100vh, min-content) [map-end] minmax(100vh, min-content)
 }
 
 .secondary-title {
@@ -18,7 +18,6 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    background-image: linear-gradient(to right, $color-primary-dark, lighten($color-primary-light, 50%) );
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
@@ -50,6 +49,8 @@
     // box-shadow: -1rem -1rem 24px black;
     &__title {
         grid-column: 1 / -1;
+        background-image: linear-gradient(to right, $color-primary-dark, lighten($color-primary-light, 50%) );
+
 
         // @include respond(tab-port) {
         //     font-size: 3rem;
@@ -76,18 +77,27 @@
     height:100%;
     width:100%; 
     grid-column: 1 / -1;
+    background-color: $color-primary-dark;
+    clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
+    padding-bottom: 5rem;
+    margin-top: -15vh;
     &__title {
-        flex: .2;
+        flex: .15;
+        background-image: linear-gradient(to right, $color-secondary-dark, lighten($color-secondary-light, 50%) );
+
     }
     &__container {
-        flex: .8;
+        flex: .85;
         overflow: hidden;
+        width: 90%
     }
     &__iframe {
-        width: 100%;
-        height: 100%;
+        max-width: 90%;
+        height: 90%;
 
     }
 }
