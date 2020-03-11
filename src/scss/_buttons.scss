@@ -45,6 +45,7 @@
         }
     }
 
+
     &--green {
         background-color: $color-green;
         color: $color-white;
@@ -77,9 +78,18 @@
         height: 10vh;
         border-radius: 1rem 1rem 0 0 ;
         text-align: center;
-        font-size: 5vh;
-        width: 100vw;
+        font-size: 3vh;
+        width: 50vw;
         bottom: 0;
         right: 0;
+        &.seccond {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100% ;
     }
 }

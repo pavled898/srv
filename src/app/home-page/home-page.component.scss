@@ -38,7 +38,7 @@
     // background-color: rgba($color-secondary-light, .98);
     padding: 20vh 0 5rem 0 ;
     display: grid;
-    grid-template-columns: 1fr repeat(3, minmax(0em, 40rem)) 1fr;
+    grid-template-columns: 1fr repeat(3, minmax(0em, 30rem)) 1fr;
     grid-template-rows: 20vh 80vh;
     gap: 2rem;
     align-content: start;
@@ -99,6 +99,13 @@
         max-width: 90%;
         height: 90%;
 
+    }
+
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none) {
+                padding-top: 0;
+                margin-top: 0;
+                clip-path: none;
     }
 }
 
