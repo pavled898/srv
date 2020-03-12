@@ -1,1 +1,24 @@
-<p>booking works!</p>
+<div class="month">
+
+    <div class="month__arrow">&#10094;</div>
+    <div>
+        {{months[viewMonth]}}<br>
+        <span style="font-size:18px">{{viewYear}}</span>
+    </div>
+    <div class="month__arrow">&#10095;</div>
+
+</div>
+<div class="days">
+    <div class="weekday">Pon</div>
+    <div class="weekday">Uto</div>
+    <div class="weekday">Sre</div>
+    <div class="weekday">Čet</div>
+    <div class="weekday">Pet</div>
+    <div class="weekday">Sub</div>
+    <div class="weekday">Ned</div>
+
+    <div class="dates" *ngIf="viewYear === selectedYear && viewMonth === selectedMonth">
+        <div class="date" *ngFor="let date of viewDays">{{date}}</div>
+    </div>
+
+</div>
